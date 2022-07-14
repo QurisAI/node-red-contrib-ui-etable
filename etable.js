@@ -31,8 +31,6 @@ module.exports = function (RED) {
         var configAsJson = JSON.stringify(config);
         var mid = (dark) ? "_midnight" : "";
         var html = String.raw`
-                <link href='ui-etable/css/tabulator`+mid+`.min.css' rel='stylesheet' type='text/css'>
-                <script type='text/javascript' src='ui-etable/js/tabulator.js'></script>
                 <div id='ui_etable-{{$id}}'></div>
                 <input type='hidden' ng-init='init(` + configAsJson + `)'>
             `;
